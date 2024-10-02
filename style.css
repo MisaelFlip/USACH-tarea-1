@@ -1,0 +1,54 @@
+html {
+  background-color: orangered;
+}
+
+header {
+  height: auto;
+  border: 10px solid black;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.contenedor {
+  display: flex;
+}
+
+.logo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 5px 10px;
+}
+
+.logo-img {
+  height: 80px;
+}
+
+.logo-texto {
+  font-size: 18px;
+  font-weight: 900;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.navbar-elements {
+  display: flex;
+  padding: 5px;
+}
+
+.navbar-item {
+  margin: 5px;
+  padding: 8px;
+  border: 2px solid black;
+  border-radius: 25px;
+  font-size: 15;
+  color: white;
+}
