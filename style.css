@@ -1,26 +1,35 @@
+/*  de google font importe un estilo y de letra */
 @import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
 
+/* El root define variables para utilizar en el documento */
 :root {
   --color-oscuro: #454545;
   --color-naranjo: #ff6000;
   --color-naranjo-claro: #ffa559;
   --color-crema: #ffe6c7;
+  --font-document: Lobster;
 }
-
-html {
-  background-color: black;
+/* tuve que cambiar la etiqueta (HTML) por body ya que boostrap me lo detectaba asi */
+body {
+  background-color: black; /* Color de fondo */
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Lobster;
+  font-family: var(--font-document); /* Tipo de letra del documento */
 }
 
 header {
   background-color: var(--color-naranjo);
 }
 
+footer {
+  margin: 20px;
+  color: #454545;
+  border-top: 1px solid var(--color-oscuro);
+}
+/* etiquetas arriba clases abajo */
 .contenedor-header {
-  display: flex;
+  display: flex; /* esta propiedad de  estilo me permite manipular la alineación, el espaciado y el orden de los elementos dentro de un contenedor  */
   justify-content: space-between;
 }
 
@@ -31,8 +40,8 @@ header {
 
 .navbar {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: center; /* aliniea de manera vertical */
+  justify-content: center; /* alinia de forma horizontal */
   padding: 0;
 }
 
@@ -43,13 +52,13 @@ header {
 }
 
 .item-list {
-  list-style: none;
+  list-style: none; /* elimina la vi;eta de la lista */
   margin: 0px 15px;
 }
 
 .item-list > a {
-  text-decoration: none;
-  color: var(--color-oscuro);
+  text-decoration: none; /* elimina estilos de hipervinculo */
+  color: black;
   padding: 5px;
   font-size: x-large;
 }
@@ -57,7 +66,11 @@ header {
 .titulos {
   color: var(--color-naranjo-claro);
   text-align: center;
-  margin: 50px 0;
+  margin: 80px 0;
+}
+
+.titulos > h1 {
+  color: var(--color-naranjo);
 }
 
 .pilares {
@@ -85,4 +98,15 @@ header {
   color: var(--color-naranjo-claro);
   text-align: justify;
   padding: 10px;
+}
+
+.carousel-inner {
+  height: 400px;
+  width: 90%;
+  margin: 40px auto;
+}
+
+.carousel-item > img {
+  object-fit: cover;
+  transform: translateY(-10%);
 }
