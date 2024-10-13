@@ -76,6 +76,9 @@ footer {
 .pilares {
   display: flex;
   text-align: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
 
 .card {
@@ -83,6 +86,7 @@ footer {
   border-radius: 20px;
   background-color: var(--color-oscuro);
   margin: 10px;
+  width: 260px;
 }
 
 .card > img {
@@ -109,4 +113,31 @@ footer {
 .carousel-item > img {
   object-fit: cover;
   transform: translateY(-10%);
+}
+/* Los medias Query se utilizan de :
+  320px a 576px s
+  576px a 768px m
+  768px a 992px l
+  992px a 1200px xl
+ */
+
+@media (min-width: 320px) and (max-width: 768px) {
+  .contenedor-header {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .list {
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .carousel-inner {
+    height: 150px;
+  }
 }
