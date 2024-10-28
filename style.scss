@@ -1,6 +1,6 @@
-@charset "UTF-8";
 /* Importar estilo de Google Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+
 /* Definir variables en el root */
 :root {
   --color-oscuro: #454545;
@@ -42,9 +42,11 @@ footer {
   flex-direction: column;
 }
 
-.logo > img {
-  height: 100px;
-  margin: 10px 25px;
+.logo {
+  > img {
+    height: 100px;
+    margin: 10px 25px;
+  }
 }
 
 .navbar {
@@ -58,32 +60,38 @@ footer {
   display: flex;
   padding: 0;
   margin: 0;
-}
-.list .item-list {
-  list-style: none; /* Eliminar viñetas de la lista */
-  margin: 0 15px;
-}
-.list .item-list > a {
-  text-decoration: none; /* Eliminar estilos de hipervínculo */
-  color: black;
-  padding: 5px;
-  font-size: x-large;
+
+  .item-list {
+    list-style: none; /* Eliminar viñetas de la lista */
+    margin: 0 15px;
+
+    > a {
+      text-decoration: none; /* Eliminar estilos de hipervínculo */
+      color: black;
+      padding: 5px;
+      font-size: x-large;
+    }
+  }
 }
 
 .titulos {
   color: var(--color-naranjo-claro);
   text-align: center;
   margin: 80px 0;
-}
-.titulos > h1 {
-  color: var(--color-naranjo);
+
+  > h1 {
+    color: var(--color-naranjo);
+  }
 }
 
 /* Grid*/
 .pilares {
   width: 100%;
   display: grid; /* Cambiar a grid */
-  grid-template-columns: repeat(auto-fill, minmax(200px, 300px)); /* Crear columnas dinámicas */
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(200px, 300px)
+  ); /* Crear columnas dinámicas */
   gap: 20px; /* Espacio entre las tarjetas */
   text-align: center;
   justify-content: center;
@@ -95,18 +103,21 @@ footer {
   border-radius: 20px;
   background-color: var(--color-oscuro);
   margin: 10px; /* Puedes ajustar esto o eliminarlo si el gap de Grid lo cubre */
-}
-.card > img {
-  height: 80px;
-  margin: 15px auto;
-}
-.card > h2 {
-  color: var(--color-naranjo);
-}
-.card > p {
-  color: var(--color-naranjo-claro);
-  text-align: justify;
-  padding: 10px;
+
+  > img {
+    height: 80px;
+    margin: 15px auto;
+  }
+
+  > h2 {
+    color: var(--color-naranjo);
+  }
+
+  > p {
+    color: var(--color-naranjo-claro);
+    text-align: justify;
+    padding: 10px;
+  }
 }
 
 .carousel-inner {
@@ -125,19 +136,20 @@ footer {
   .contenedor-header {
     flex-direction: column;
   }
+
   .list {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
   }
+
   .logo {
     display: flex;
     justify-content: center;
     align-items: center;
   }
+
   .carousel-inner {
     height: 150px;
   }
 }
-
-/*# sourceMappingURL=style.css.map */
